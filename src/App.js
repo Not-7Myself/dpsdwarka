@@ -6,6 +6,7 @@ import Info from "./components/Info";
 import Awards from "./components/Awards";
 import Sidebar from "./components/sidebar";
 import Mainbar from "./components/Mainbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Sidebar />
         <Mainbar />
       </div>
+      <Footer />
     </div>
   );
 }

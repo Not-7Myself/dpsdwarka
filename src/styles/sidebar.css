@@ -1,0 +1,115 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 20px; /* Space between the two divs */
+  padding: 20px;
+}
+
+.sidebar-bottom h1,
+.sidebar-top h1 {
+  color: var(--primary);
+  text-align: left;
+  margin: 10px 0;
+}
+
+.sidebar-top,
+.sidebar-bottom {
+  color: white;
+  flex: 1;
+}
+.card {
+  background-color: var(--secondary);
+  color: var(--text);
+  text-align: left;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.container {
+  width: 400px;
+  margin: auto;
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--text);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.days {
+  flex: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.day {
+  position: relative;
+  width: 14.28%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+.tday {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+}
+.day:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}

@@ -45,3 +45,7 @@
     transform: rotate(360deg);
   }
 }
+.main {
+  display: flex;
+  height: 100vh;
+}
