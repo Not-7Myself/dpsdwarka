@@ -1,0 +1,22 @@
+.info {
+  display: flex;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: "Teko", sans-serif;
+}
+.info .contents {
+  margin: 75px 60px;
+  text-align: left;
+}
+.info h1 {
+  font-size: 40px;
+  color: var(--primary);
+}
+.info p {
+  font-size: 25px;
+}
+.info .logos img {
+  width: 200px;
+  margin: 50px 100px;
+  margin-left: 0px;
+}

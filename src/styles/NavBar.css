@@ -1,0 +1,161 @@
+/* CSS Variables */
+:root {
+  --text: rgb(3, 22, 4);
+  --background: rgb(251, 251, 254);
+  --primary: rgb(0, 117, 72);
+  --secondary: rgb(168, 250, 175);
+  --accent: rgb(15, 138, 38);
+}
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Arial", sans-serif;
+}
+
+nav {
+  background-color: var(--primary); /* Primary color for the navbar */
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  color: var(--background); /* White text for contrast */
+  font-size: 24px;
+}
+
+.links {
+  display: flex;
+  gap: 20px; /* Spacing between links */
+  flex-wrap: wrap; /* Allows links to wrap */
+  justify-content: center;
+  margin-left: 250px;
+}
+
+.links li {
+  color: var(--background); /* White text for the links */
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0 10px;
+}
+
+.links li {
+  position: relative;
+  padding: 10px 15px;
+  color: var(--background);
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.links li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+.links li:hover::before {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.login {
+  margin-left: auto; /* Pushes login button to the far right */
+}
+
+.login button {
+  background-color: var(--background);
+  color: var(--primary); /* Accent text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.login button:hover {
+  margin-bottom: 7.5px;
+}
+
+@media (max-width: 1080px) {
+  .links {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .links {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .links li {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+
+  .login {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo h2 {
+    font-size: 20px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,30 @@
+.hero {
+  overflow: hidden;
+  height: 88.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  font-family: "Teko", sans-serif;
+}
+.hero::before {
+  content: "";
+  filter: brightness(50%);
+  background: url("../school.jpg") no-repeat center;
+  position: absolute;
+  background-size: 100% 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hero h1 {
+  font-size: 65px;
+  color: #fff;
+}
+.hero h3 {
+  font-size: 30px;
+  color: #fff;
+}

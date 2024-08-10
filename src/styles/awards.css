@@ -1,0 +1,43 @@
+.title {
+  text-align: left;
+  color: var(--primary);
+  margin-left: 60px;
+  font-size: 40px;
+}
+.award {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding: 20px; /* Optional: Adds padding around the container */
+  max-width: 100vw; /* Ensures the container fits within the viewport width */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.award .box {
+  background: url("../school.jpg") no-repeat center;
+
+  height: 400px;
+  width: 350px;
+  background-size: auto 100%;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin: 20px 40px;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.award .box:hover {
+  background-size: auto 110%;
+}
+
+.award .box h3 {
+  text-align: left;
+  padding-top: 75px;
+  padding-left: 20px;
+}
+
+.award .box h1 {
+  font-size: 30px;
+  text-align: left;
+  padding: 10px 20px;
+}
